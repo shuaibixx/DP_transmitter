@@ -1,0 +1,27 @@
+www.nsingtech.com
+3.1.3 QFN32 (5mmx5mm)
+图 3-3 N32G031 系列 QFN32(5mmx5mm)引脚分布
+0
+B 8 T O O B 7 B 6 B 5 B 4 B 3 A 5 1
+P B P P P P P P
+2 1 0 9 8 7 6 5
+3 3 3 2 2 2 2 2
+VDD 1 24 PA14
+QFN32
+PF0-OSC_IN 2 23 PA13
+PF1-OSC_OUT 3 22 PA12
+NRST 4 21 PA11
+33
+VDDA 5 VSS 20 PA10
+PA0 6 19 PA9
+PA1 7 18 PA8
+PA2 8 17 VDD
+0 1 2 3 4 5 6
+9 1 1 1 1 1 1 1
+3 4 5 6 7 0 1 2
+A A A A A B B B
+P P P P P P P P
+25 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

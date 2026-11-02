@@ -1,0 +1,88 @@
+www.nsingtech.com
+引脚复用定义
+复用功能 IO 重映射详情请参考用户手册“GPIO 和 AFIO”章节内的“复用功能”章节。
+表 3-1 管脚定义
+封装
+m m e
+L Q F P 4 8 L Q F P 3 2 ( m x
+m
+5
+5
+m N 3 2 ) ( m x
+m
+4
+4
+m N 3 2 ) U F Q F P N 2
+0
+T S S O P 2 0 (fu
+P
+n
+i
+c r
+n
+e t i s
+n
+o e
+a
+n t
+m
+) a
+e
+ft er (
+1)
+T y p e I/ O str u
+ct u r
+Alternate functions Additional functions
+F F
+Q Q
+1 1 1 1 - - VDD S - Complementary power supply
+RTC_TAMP1,
+2 - - - - - PC13 I/O TC RTC_TS, WKUP1
+RTC_OUT,
+PC14-OSC32_IN
+3 - - 2 1 - I/O TC - OSC32_IN
+(PC14)
+PC15-
+4 - - 3 2 - OSC32_OUT I/O TC - OSC32_OUT
+(PC15)
+PF0-OSC_IN OSC_IN,
+5 2 2 - - 2 I/O TC I2C1_SDA
+(PF0) OPAMP_VINP
+I2C1_SCL,
+PF1-OSC_OUT
+6 3 3 - - 3 I/O TC USART1_CK, OSC_OUT
+(PF1)
+USART2_CK
+Device reset input / internal reset output
+7 4 4 4 3 4 NRST I RST
+(active low)
+8 - - - - - VSSA S - Analog ground
+9 5 5 5 4 5 VDDA S - Analog power supply
+USART1_CTS
+USART2_CTS
+LPUART_TX, ADC_IN0,
+SPI1_SCK, RTC_TAMP2,
+I2S_CK, WKUP0,
+10 6 6 6 5 6 PA0 I/O TC
+USART2_RX, COMP_INM,
+LPTIM_IN1, COMP_OUT,
+TIM8_CH1, OPAMP_VINP
+TIM8_ETR,
+LPUART_RX,
+USART1_RTS
+USART2_RTS,
+EVENTOUT,
+SPI1_NSS,
+ADC_IN1,
+I2S_WS,
+11 7 7 7 6 7 PA1 I/O TC COMP_INP,
+LPTIM_IN2,
+OPAMP_VINP
+TIM8_CH2,
+I2C1_SMBA,
+TIM3_ETR,
+LPUART_TX
+29 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

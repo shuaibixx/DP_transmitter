@@ -1,0 +1,43 @@
+www.nsingtech.com
+符号 参数 条件 最小值 典型值 最大值 单位
+IL OSC_IN输入漏电流 VSS≤VIN≤VDD - - ±1 μA
+1. 由设计和综合评估保证，不在生产中测试。
+来自外部振荡源产生的低速外部用户时钟
+下表中给出的特性参数是使用一个低速的外部时钟源测得，环境温度和供电电压符合表 4-4的条件。
+表 4-15 低速外部用户时钟特性(Bypass 模式)
+符号 参数 条件 最小值 典型值 最大值 单位
+f
+LSE_ext
+用户外部时钟频率 0 32.768 1000 KHz
+V LSEH OSC32_IN输入引脚高电平电压(1) 0.7VDD - VDD
+V
+V
+LSEL
+OSC32_IN输入引脚低电平电压(1) VSS - 0.3VDD
+-
+tw(LSE) OSC32_IN高或低的时间(1) 450 - -
+ns
+t
+r(LSE) OSC32_IN上升或下降的时间(1) - - 10
+t
+f(LSE)
+DuCy (LSE) 占空比(1) 30 - 70 %
+IL OSC32_IN输入漏电流(1) VSS≤VIN≤VDD - - ±1 μA
+1. 由设计和综合评估保证，不在生产中测试。
+图 4-5 外部高速时钟源的交流时序图
+V
+HSEH 90%
+V 10%
+HSEL
+t
+t r(HSE) t f(HSE) t W(HSE) t W(HSE)
+T
+HSE
+I
+f L
+HSE_ext OSC_IN
+external clock source
+43 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

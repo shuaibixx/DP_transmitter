@@ -1,0 +1,14 @@
+串口输出：
+PA2  -- USART TX
+PA3  -- USART RX
+
+传感器读取数据：
+PF0 -- I2C1-SDA
+PF1 -- I2C1-SCL
+
+显示屏：
+PA6 -- I2C2-SCL
+PA7 -- I2C2-SDA
+
+GP315:
+PA4 -- PWM

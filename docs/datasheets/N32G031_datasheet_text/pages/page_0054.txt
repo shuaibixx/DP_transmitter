@@ -1,0 +1,63 @@
+www.nsingtech.com
+3V~3.6V 300 - -
+4.5V~5.5V 200 - -
+1. 由设计保证，不在生产中测试。
+2. 上拉电阻是设计为一个真正的电阻串联一个不可开关的PMOS实现。这个PMOS开关的电阻很小(约占10%)。
+图 4-10 建议的 NRST 引脚保护
+V
+DD
+R
+External reset circuit(1) PU
+NRST(2)
+Internal reset
+Filter
+0.1uF
+1. 复位网络是为了防止寄生复位。
+2. 用户必须保证NRST引脚的电位能够低于最大VIL(NRST) 以下，否则MCU不能得到复位。
+4.3.14 TIM定时器特性
+列出的参数由设计保证。
+表 4-29 TIMx(1)特性
+符号 参数 条件 最小值 最大值 单位
+f TIMxCLK = 48MHz 1 - t TIMxCLK
+t
+res(TIM)
+定时器分辨时间
+f
+TIMxCLK
+= 48MHz 20.8 - ns
+- 0 f TIMxCLK/2 MHz
+f
+EXT
+(2) CH1至CH4的定时器外部时钟频率
+f
+TIMxCLK
+= 48MHz 0 24 MHz
+ResTIM 定时器分辨率 f TIMxCLK = 48MHz - 16 位
+f TIMxCLK = 48MHz 1 65536 t TIMxCLK
+t
+COUNTER
+当选择了内部时钟时，16位计数器时钟周期
+f = 48MHz 0.0208 1365 μs
+TIMxCLK
+f TIMxCLK = 48MHz - 65536x65536 t TIMxCLK
+t
+MAX_COUNT
+最大可能的计数
+f = 48MHz - 89.478 s
+TIMxCLK
+1. TIMx是一个通用的名称，代表TIM1~TIM8。
+2. 仅对高级定时器与通用定时器适用，对基本定时器不适用
+4.3.15 I2C接口特性
+除非特别说明，参数是使用环境温度，f 频率和 V 供电电压符合表 4-4 的条件测量得到。
+PCLK1 DD
+N32G031 产品的 I2C 接口符合标准 I2C 通信协议，但有如下限制：SDA 和 SCL 不是“真”开漏的引脚，当配
+置为开漏输出时，在引出脚和 VDD 之间的 PMOS 管被关闭，但仍然存在。
+I2C 接口特性见下表，有关输入输出复用功能引脚(SDA 和 SCL)的特性详情，参见第 4.3.12 节。
+表 4-30 I2C 接口特性
+标准模式 快速模式 快速模式
+符号 参数 单位
+最小 最大 最小 最大 最小 最大
+51 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

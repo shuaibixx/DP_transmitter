@@ -1,0 +1,56 @@
+www.nsingtech.com
+图 4-15 I2S 从模式时序图(飞利浦协议)(1)
+t
+c(SCLK)
+CLKPOL=0
+CLKPOL=1
+t t t
+w(SCLKH) w(SCLKL) h(WS)
+WS输入
+t su(WS) t v(SD_ST) t h(SD_ST)
+SD发送 发送最低位(2) 发送最高位 发送第n位 发送最低位
+t su(SD_SR) t h(SD_SR)
+SD接收 接收最低位(2) 接收最高位 接收第n位 接收最低位
+1. 测量点设置于 CMOS 电平：0.3VDD 和 0.7VDD 。
+2. 前一字节的最低位发送/接收。在第一个字节之前没有这个最低位的发送/接收。
+图 4-16 I2S 主模式时序图(飞利浦协议)(1)
+t t t
+c(CLK) f(CLK) r(CLK)
+CLKPOL=0
+CLKPOL=1
+t v(WS) t w(CLKH) t w(CLKL) t h(WS)
+WS input
+t v(SD_MT) t h(SD_MT)
+Last bit
+SD transmit Last bit transmit(2) MSB transmit Bit n transmit
+transmit
+t t
+su(SD_MR) h(SD_MR)
+Last bit
+SD receive Last bit receive(2) MSB receive Bit n receive
+receive
+1. 测量点设置于 CMOS 电平：0.3VDD 和 0.7VDD 。
+2. 前一字节的最低位发送/接收，在第一个字节之前没有这个最低位的发送/接收。
+4.3.17 12位模数转换器(ADC)电气参数
+除非特别说明，参数是使用符合表 4-4 的条件的环境温度、fHCLK 频率和 VDDA 供电电压测量得到。
+表 4-33 ADC 特性
+符号 参数 条件 最小值 典型值 最大值 单位
+V
+DDA
+(1) 供电电压 - 2.4 3.3 5.5 V
+V
+REF+
+正参考电压 - 2.4 - VDDA V
+f
+ADC
+ADC时钟频率 - - - 18 MHz
+fs (1) 采样速率 - 0.03 - 1 Msps
+V
+AIN
+转换电压范围 - 0 - V
+REF+
+V
+57 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

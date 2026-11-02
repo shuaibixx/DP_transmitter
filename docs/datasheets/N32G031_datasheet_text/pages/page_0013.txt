@@ -1,0 +1,71 @@
+www.nsingtech.com
+图 2-2 时钟树
+Clock Tree
+Legend:
+HSE = High-speed external clock signal ADC1MSEL
+H LS S E I = = H L i o g w h - - s s p p e e e e d d i e n x t t e e r r n n a a l l c c l l o o c c k k s s i i g g n n a a l l HSE ADC 1M
+LSI = Low-speed internal clock signal Prescaler ADC_CLK 1M
+/1/2/…/32
+HSI FLASH_CLK
+to Flash programming
+I2S_CLK
+ADC PLL
+ADC_PLLCLK
+prescaler
+/1/2/…/256
+ADCPLLPRES[4] ADC_HCLK
+ADC_CLK
+SCLKSW ADC HCLK
+prescaler CKMOD(ADC_CTRL3)
+LSE /1/2/…/32
+HSI RC FCLK
+LSI
+8MHz HCLK CPU
+PLLMULFCT HSI AHB BUS
+AHB
+SYSCLK HCLK /8 SysTick
+O O S S C C _ _ O IN UT 4 H ~ S 2 E 0 M OS H C z PLL PLLCLK 4 M 8M A H X z /1 P / r 2 e / s … ca / l 5 e 1 r 2 DMA_CLK/CRC_CLK
+PLLSRC PREDIV HSE APB1
+& POSTDIV Prescaler 48MHz MAX PCLK1 to
+CLKSSEN /1/2/4/8/16 APB1 peripherals
+HSE
+OSC32_OUT LSE OSC /128 RTC_CLK If(APB1 T P I r M esc 3 a / l 6 er = 1) x1 TIM3/6_CLK
+OSC32_IN 32.768KHz LSE else x2
+APB2
+RTCSEL Prescaler 48MHz MAX PCLK2 to
+L 30 S K I R H C z LSI IWDG_CLK /1/2/4/8/16 APB2 peripherals
+TIM 1/8
+If(APB2 Prescaler = 1) x1
+else x2
+SYSCLK
+TIM1/8_CLK
+SYSCLK
+HSI TIMCLKSEL
+HSE
+SYSCLK
+MCO LSI APB1_PCLK
+LSE PLL MCOPRES HSI LPUART_CLK
+Prescaler PLLCLK H L S S E I
+/2/3/4/.../15 LSE
+MCO SYSCLK
+APB1_PCLK
+HSI
+HSE
+LPTIM_CLK
+LSI
+LSE
+CMP_OUT
+启动模式
+在启动时，通过 BOOT0 引脚及 Flash 系统区配置比特可以选择三种启动模式中的一种：
+ 从程序闪存存储器（FLASH Memory）启动
+ 从系统存储器（System Memory）启动
+ 从内部 SRAM 启动
+启动加载程序(Bootloader)存放于系统存储器中
+供电方案
+ VDD 区域：电压输入范围为 1.8V~5.5V，主要为 Main Regulator，IO 及时钟复位系统提供电源输入。
+ VDDA 区域：输入电压范围 1.8V~5.5V，为大部分模拟外设供电，详细信息请参阅相关数据手册电气特
+性部分。
+10 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

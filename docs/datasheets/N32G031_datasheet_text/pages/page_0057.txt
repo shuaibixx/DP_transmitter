@@ -1,0 +1,48 @@
+www.nsingtech.com
+主模式 0 -
+th(MI) (1)
+数据输入保持时间
+ns
+从模式 4 -
+th(SI) (1)
+ta(SO) (1)(2) 数据输出访问时间 从模式，fPCLK = 18MHz 0 3t PCLK ns
+数据输出禁止时间 从模式 2 10 ns
+tdis(SO) (1)(3)
+SPI1 - 32
+从模式(使能边沿之后)
+tv(SO) (1) SPI2 - 30
+数据输出有效时间 ns
+SPI1 - 28
+主模式(使能边沿之后)
+tv(MO) (1) SPI2 - 28
+从模式(使能边沿之后) 0 -
+th(SO) (1)
+数据输出保持时间 ns
+主模式(使能边沿之后) 0 -
+th(MO) (1)
+1. 由设计和综合评估保证，不在生产中测试。
+2. 最小值表示驱动输出的最小时间，最大值表示正确获得数据的最大时间。
+3. 最小值表示关闭输出的最小时间，最大值表示把数据线置于高阻态的最大时间。
+4. 测试电压为 3.3V。
+图 4-12 SPI 时序图 – 从模式和 CPHA=0
+CLKPHA=0
+NSS input
+t su(NSS) t c(SCLK) t h(NSS)
+CLKPOL=0 t
+w(SCLKH)
+t
+w(SCLKL)
+CLKPOL=1
+t a(SO) t v(SO) t h(SO) t r(SCLK) t dis(SO)
+t
+f(SCLK)
+MISO output MSB out Bit 6~1 out LSB out
+t
+su(SI)
+MOSI input MSB in Bit 6~1 in LSB in
+t
+h(SI)
+54 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

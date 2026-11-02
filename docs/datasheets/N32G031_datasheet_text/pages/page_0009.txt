@@ -1,0 +1,39 @@
+www.nsingtech.com
+器件一览
+表 1-1 N32G031 系列资源配置(1)
+N32G031 N32G031 N32G031K8Q7-
+器件型号 N32G031K8Q7 N32G031K8L7 N32G031C8L7
+F8U7 F8S7 1
+Flash 容量（KB） 64 64 64 64 64 64
+SRAM 容量（KB） 8 8 8 8 8 8
+CPU 频率 ARM Cortex-M0 @48MHz
+工作环境 1.8~5.5V/-40~105℃
+通用 1
+高级 2
+定时器 基本 1
+LPTIM 1
+RTC 1
+SPI 2
+I2S 1
+通讯
+I2C 2
+接口
+USART 2
+LPUART 1
+GPIO 16 28 26 40
+DMA
+5
+Number of Channels
+12bit ADC 1x12bit 1x12bit 1x12bit 1x12bit
+Number of channels 7Channel 9Channel 10Channel 12Channel
+OPA/COMP 1/1
+Beeper 1
+算法支持 CRC16/CRC32
+安全保护 读写保护（RDP/WRP）、存储加密
+QFN32 QFN32
+封装 UFQFPN20 TSSOP20 LQFP32 LQFP48
+(5mmx5mm) (4mmx4mm)
+6 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

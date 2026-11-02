@@ -1,0 +1,53 @@
+www.nsingtech.com
+1. 由综合评估得出，不在生产中测试。
+静态栓锁
+为了评估栓锁性能，需要在6个样品上进行2个互补的静态栓锁测试：
+ 为每个电源引脚，提供超过极限的供电电压。
+ 在每个输入、输出和可配置的I/O引脚上注入电流。
+这个测试符合EIA/JESD78E集成电路栓锁标准。
+表 4-25 电气敏感性
+符号 参数 条件 类型
+LU 静态栓锁类 TA = +105 °C，符合JESD78E II 类A
+4.3.12 I/O端口特性
+通用输入/输出特性
+除非特别说明，下表列出的参数是按照表 4-4的条件测量得到。所有的I/O端口都是兼容CMOS和TTL。
+表 4-26 I/O 静态特性
+符号 参数 VDD 条件 最小值 最大值 单位
+5 - - 0.3×VDD
+VIL 输入低电平电压 3.3 - - 0.8
+1.8 - - 0.2×VDD
+V
+5 - 0.7×VDD -
+输入高电平电压
+VIH 3.3 - 2.0 -
+1.8 - 0.8×VDD -
+I/O脚施密特触发器电压迟滞 5/3.3/1.8 -
+Vhys
+(1)
+0.1×VDD --- V
+输入漏电流IIH 5/3.3/1.8 - --- 1
+Ilkg(2) μA
+输入漏电流IIL 5/3.3/1.8 - -1 -
+5 High driving Imin=16mA
+VDD-0.8 -
+low driving Imin=8mA
+3.3 High driving Imin=8mA
+VOH 输出高电平电压 2.4 -
+low driving Imin=4mA
+1.8 High driving Imin=4mA
+VDD-0.45 -
+low driving Imin=2mA
+V
+5 High driving Imin=16mA
+- 0.7
+low driving Imin=8mA
+3.3 High driving Imin=8mA
+VOL 输出低电平电压 - 0.45
+low driving Imin=4mA
+1.8 High driving Imin=4mA
+- 0.4
+low driving Imin=2mA
+48 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

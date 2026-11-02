@@ -1,0 +1,117 @@
+www.nsingtech.com
+1 产品简介
+N32G031 系列微控制器产品采用 32 位 ARM Cortex®-M0 内核，最高工作主频 48MHz，集成高达 64KB 加
+密存储 Flash，最大 8KB SRAM; 内置一个高速 AHB 总线，二个低速外设总线 APB 及总线矩阵，最多支持
+40 个通用 I/O，提供丰富的高性能模拟接口，包括 1 个 12 位 1Msps ADC，最多支持 12 个外部输入通道、1
+路独立的运算放大器、1 个高速比较器，同时提供多种数字通信接口，包括 3 个 U(S)ART、2 个 I2C、2 个
+SPI、1 个 I2S。
+N32G031 系列产品可稳定工作于-40°C 至+105°C 的温度范围，供电电压 1.8V 至 5.5V，提供多种功耗模式
+供用户选择，符合低功耗应用的要求。该系列产品提供包括从 20 脚至 48 脚的不同封装形式，根据不同的
+封装形式，器件中的外设配置不尽相同。
+N32G031 系列微控制器适合于手机移动设备、家电应用、电机控制、平衡车、电源管理系统等多种应用场
+景，图 1-1 给出了该系列产品的总线框图。
+图 1-1 N32G031 系列框图
+Flash SW
+Flash Control
+z H System Bus Fm Co ax rt : e 4 x 8 - M M H 0 z Core
+M
+8
+SRAM 4
+x: NVIC
+a
+M
+ADC x
+i rta DMA
+DMA
+M
+s
+u
+1 B
+HDIV s u B
+B H
+SQRT m A
+e
+ty
+RCC S
+B
+H
+CRC A
+AHB
+System Bus2
+AAFFIIOO
+EEXXTTII
+APWFIOR
+z
+H
+GGPPIIOOAA M SPI1/I2S1
+8 ERXTTCI z H TIM3
+G
+G G G G
+GP
+PP PP
+PI
+II II
+IO
+OO OO
+OD
+BB CC
+F B
+x a
+P
+M
+A
+2
+4 : US S A P R I2 T1
+W
+G
+G
+G
+IW
+O
+P
+P
+P
+W
+I
+P
+I
+I
+DO
+O
+OA
+D
+GA
+B
+C
+G
+x a 8
+M
+M
+1
+4 :
+L
+U
+L
+P
+S
+P
+U
+A
+T
+A
+R
+IM
+R
+T
+T
+2
+B
+GTPIMIO1E P A
+GCPOIMODP I2C1
+GTPIMIO8F
+GTPIIMO6E I2C2
+BGEPEIOPEGR
+5 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

@@ -1,0 +1,54 @@
+www.nsingtech.com
+6 订购信息
+图 6-1 N32G031 系列订货代码信息图示
+N 32 G 0 31 C 8 L 7 T
+Company
+Abbreviation
+Nationstech
+MCU Bit Width
+Package
+32bit
+T:Tray
+Types of Product
+General Purpose Temperature Range
+MCU Core 7 : -40°C~105°C
+0 = ARM Cortex-M0
+Package Type
+Product Series
+L = LQFP
+30 = Basic type T = TQFP
+Q = QFN
+Number of Pins S = TSSOP
+U = UFQFPN
+F = 20 Pins
+K = 32 Pins
+Memory Size
+C = 48 Pins
+6 = 32K Flash
+8 = 64K Flash
+表 6-1 N32G031 系列订货代码信息
+订购型号(1) 封装 封装尺寸 包装(2) SPQ(3) 温度范围
+N32G031F8U7 UFQFPN20 3mm x 3mm 托盘 490 -40°C ~ 105°C
+N32G031F8U7 UFQFPN20 3mm x 3mm 卷带 5000 -40°C ~ 105°C
+N32G031F8S7 TSSOP20 6.5mm x 4.4mm 料管 70 -40°C ~ 105°C
+N32G031F8S7 TSSOP20 6.5mm x 4.4mm 卷带 3500 -40°C ~ 105°C
+N32G031K8Q7 QFN32 5mm x 5mm 托盘 490 -40°C ~ 105°C
+N32G031K8Q7 QFN32 5mm x 5mm 卷带 2500 -40°C ~ 105°C
+N32G031K8Q7-1 QFN32 4mm x 4mm 托盘 490 -40°C ~ 105°C
+N32G031K8L7 LQFP32 7mm x 7mm 托盘 250 -40°C ~ 105°C
+N32G031C8L7 LQFP48 7mm x 7mm 托盘 250 -40°C ~ 105°C
+N32G031F6U7 UFQFPN20 3mm x 3mm 托盘 490 -40°C ~ 105°C
+N32G031F6U7 UFQFPN20 3mm x 3mm 卷带 5000 -40°C ~ 105°C
+N32G031F6S7 TSSOP20 6.5mm x 4.4mm 料管 70 -40°C ~ 105°C
+N32G031F6S7 TSSOP20 6.5mm x 4.4mm 卷带 3500 -40°C ~ 105°C
+N32G031K6Q7 QFN32 5mm x 5mm 托盘 490 -40°C ~ 105°C
+N32G031K6Q7 QFN32 5mm x 5mm 卷带 2500 -40°C ~ 105°C
+N32G031K6Q7-1 QFN32 4mm x 4mm 托盘 490 -40°C ~ 105°C
+N32G031K6L7 LQFP32 7mm x 7mm 托盘 250 -40°C ~ 105°C
+1. 最新详细订购信息见选型手册。
+2. 此包装为基础包装，如果有其他需求，请联系国民技术。
+3. 最小包装数量。
+75 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

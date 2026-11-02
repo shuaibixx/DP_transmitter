@@ -1,0 +1,51 @@
+www.nsingtech.com
+图 4-13 SPI 时序图 – 从模式和 CPHA=1(1)
+CLKPHA=1
+NSS input
+t
+c(SCLK) t
+t h(NSS)
+su(NSS)
+CLKPOL=0
+t
+w(SCLKH)
+t
+w(SCLKL)
+CLKPOL=1 t
+r(SCLK)
+t a(SO) t v(SO) t h(SO) t f(SCLK) t dis(SO)
+MISO output MSB out Bit 6~1 out LSB out
+t t
+su(SI) h(SI)
+MOSI input MSB in Bit 6~1 in LSB in
+1. 测量点设置于CMOS电平：0.3VDD和0.7VDD。
+图 4-14 SPI 时序图 – 主模式(1)
+NSS input
+t
+c(SCLK)
+CLKPHA=0
+CLKPOL=0
+CLKPHA=0
+CLKPOL=1
+CLKPHA=1
+CLKPOL=0
+CLKPHA=1
+t
+r(SCLK)
+CLKPOL=1
+t
+t su(MI) t w(SCLKH) f(SCLK)
+t
+w(SCLKL)
+MISO input MSB in Bit 6~1 in LSB in
+t
+h(MI)
+MOSI output MSB out Bit 6~1 out LSB out
+t
+t h(MO)
+v(MO)
+1. 测量点设置于CMOS电平：0.3VDD和0.7VDD。
+55 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

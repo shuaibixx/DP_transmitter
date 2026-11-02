@@ -1,0 +1,50 @@
+www.nsingtech.com
+图 4-2 引脚输入电压
+4.1.6 供电方案
+图 4-3 供电方案
+VDD
+VDD1/2/ Voltage
+Regulator
+Output Core circuit
+L IO
+n(1) x 100 nF e (CPU, Digital
++ 4.7 uF Gen
+P
+er
+o
+a
+r
+l
+t
+I/O
+Input w s
+l e v
+c
+L
+ir
+o
+c
+g
+u
+i
+i
+c
+t
+circuit,
+cti memory and
+h PLL)
+VSS1/2/
+VDDA
+VDDA
+Analog Peripherals
+（ADC,
+100 nF
+COMP, OPAMP）
++ 1uF
+VSSA
+1. n 为 V 个数。
+DD
+36 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

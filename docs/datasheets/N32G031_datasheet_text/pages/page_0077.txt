@@ -1,0 +1,21 @@
+www.nsingtech.com
+图 5-15 TSSOP20 丝印说明图
+LOGO
+N32XXXXXXXX
+Product number
+XXXXXXXX
+Batch number
+MCU version number
+Pin1
+图 5-16 UFQFPN20 丝印说明图
+N32XXXX
+Product series
+XXXX
+Batch Number
+XXXX
+MCU version number
+Pin1
+74 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

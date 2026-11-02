@@ -1,0 +1,221 @@
+/* 采集温压并转换为电流；可用main.h中的固定目标切换GP315标定。 */
+#include "main.h"
+#include "delay.h"
+#include "usart.h"
+#include "gp315.h"
+#include "hbp5023.h"
+
+/* 使用内部8MHz时钟，关闭PLL；总线不分频。 */
+static void app_clock_init(void)
+{
+    RCC_EnableHsi(ENABLE);
+    if (RCC_WaitHsiStable() != SUCCESS)
+    {
+        while (1) {}
+    }
+    RCC_ConfigSysclk(RCC_SYSCLK_SRC_HSI);
+    while (RCC_GetSysclkSrc() != RCC_CFG_SCLKSTS_HSI) {}
+    RCC_EnablePll(DISABLE);
+    RCC_ConfigHclk(RCC_SYSCLK_DIV1);
+    RCC_ConfigPclk1(RCC_HCLK_DIV1);
+    RCC_ConfigPclk2(RCC_HCLK_DIV1);
+    SystemCoreClockUpdate();
+}
+
+/* 串口数值输出，避免引入完整格式化打印库。 */
+static void app_print_u32(uint32_t value)
+{
+    char    buf[11];
+    uint8_t n = 0u;
+
+    if (value == 0u)
+    {
+        USART_SendByte('0');
+        return;
+    }
+
+    while (value != 0u)
+    {
+        buf[n++] = (char)('0' + (value % 10u));
+        value /= 10u;
+    }
+
+    while (n != 0u)
+    {
+        n--;
+        USART_SendByte((uint8_t)buf[n]);
+    }
+}
+
+static void app_print_fixed(float value, uint8_t frac_digits)
+{
+    int32_t scale = 1;
+    int32_t scaled;
+    int32_t whole;
+    int32_t frac;
+    uint8_t i;
+
+    for (i = 0u; i < frac_digits; i++)
+    {
+        scale *= 10;
+    }
+
+    if (value < 0.0f)
+    {
+        USART_SendByte('-');
+        value = -value;
+    }
+
+    scaled = (int32_t)((value * (float)scale) + 0.5f);
+    whole  = scaled / scale;
+    frac   = scaled % scale;
+
+    app_print_u32((uint32_t)whole);
+
+    if (frac_digits > 0u)
+    {
+        int32_t limit = 1;
+
+        USART_SendByte('.');
+
+        for (i = 1u; i < frac_digits; i++)
+        {
+            limit *= 10;
+        }
+        while (limit > 1)
+        {
+            if (frac < limit)
+            {
+                USART_SendByte('0');
+            }
+            limit /= 10;
+        }
+
+        app_print_u32((uint32_t)frac);
+    }
+}
+
+/* 按应用量程线性映射电流；超量程不修改压力值，仅限制输出。 */
+static float app_pressure_to_current(float pressure_kpa)
+{
+    float current_ma;
+
+    if (pressure_kpa <= APP_PRESSURE_MIN_KPA)
+    {
+        return APP_CURRENT_MIN_MA;
+    }
+    if (pressure_kpa >= APP_PRESSURE_MAX_KPA)
+    {
+        return APP_CURRENT_MAX_MA;
+    }
+
+    current_ma = (pressure_kpa - APP_PRESSURE_MIN_KPA)
+               / (APP_PRESSURE_MAX_KPA - APP_PRESSURE_MIN_KPA)
+               * (APP_CURRENT_MAX_MA - APP_CURRENT_MIN_MA)
+               + APP_CURRENT_MIN_MA;
+
+    return current_ma;
+}
+
+int main(void)
+{
+    HBP5023_Data sample;
+    float low_duty;
+    float high_duty;
+    float fixed_current = APP_GP315_CAL_CURRENT_MA;
+    uint8_t cal_status;
+    uint8_t sensor_error = 0u;
+
+    app_clock_init();
+    Delay_Init();
+    USART_Debug_Init();
+    GP315_Init();
+    USART_SendString("\r\n==== DP_transmitter ====\r\n");
+    if (fixed_current > 0.0f)
+    {
+        /* 固定电流标定不初始化传感器，避免压力影响标定目标。 */
+        GP315_SetCurrent_mA(fixed_current);
+        USART_SendString("Mode: fixed current; sensor disabled\r\n");
+    }
+    else
+    {
+        /* 等待首次有效压力期间为4mA；读取失败时保持最近一次输出。 */
+        GP315_SetCurrent_mA(APP_CURRENT_MIN_MA);
+        HBP5023_Init();
+        USART_SendString("Mode: pressure to current\r\n");
+    }
+    cal_status = GP315_GetCalibration(&low_duty, &high_duty);
+    if (cal_status == GP315_CAL_STATUS_APPLIED)
+        USART_SendString("Auto calibration applied\r\n");
+    else if (cal_status == GP315_CAL_STATUS_INVALID)
+        USART_SendString("Invalid calibration data; using base endpoints\r\n");
+    else
+        USART_SendString("Using base endpoints; auto disabled or readings zero\r\n");
+    USART_SendString("Active input duty endpoints=");
+    app_print_fixed(low_duty, 6u);
+    USART_SendString("/");
+    app_print_fixed(high_duty, 6u);
+    USART_SendString("%\r\n");
+
+    while (1)
+    {
+        if (fixed_current > 0.0f)
+        {
+            USART_SendString("Iset=");
+            app_print_fixed(fixed_current, 3u);
+            USART_SendString("mA\r\n");
+            Delay_ms(1000u);
+        }
+        else
+        {
+            if (HBP5023_Read(&sample) == HBP5023_OK)
+            {
+                float current_ma = app_pressure_to_current(sample.pressure_kpa);
+                GP315_SetCurrent_mA(current_ma);
+                if (sensor_error != 0u)
+                {
+                    USART_SendString("Sensor recovered\r\n");
+                    sensor_error = 0u;
+                }
+                /* AD与P保留原始测量含义；只对电流输出做量程限幅。 */
+                USART_SendString("AD=");
+                if (sample.press_adc < 0)
+                {
+                    USART_SendByte('-');
+                    app_print_u32((uint32_t)(-sample.press_adc));
+                }
+                else
+                {
+                    app_print_u32((uint32_t)sample.press_adc);
+                }
+                USART_SendString(" P=");
+                app_print_fixed(sample.pressure_kpa, 6u);
+                USART_SendString("kPa T=");
+                app_print_fixed(sample.temperature_c, 2u);
+                USART_SendString("C Iset=");
+                app_print_fixed(current_ma, 3u);
+                USART_SendString("mA");
+                if (sample.sco_stuck != 0u)
+                    USART_SendString(" SCO_TIMEOUT");
+                USART_SendString("\r\n");
+            }
+            else if (sensor_error == 0u)
+            {
+                sensor_error = 1u;
+                USART_SendString("SENSOR ERROR: I2C read failed, holding current\r\n");
+            }
+            Delay_ms(APP_SAMPLE_PERIOD_MS);
+        }
+    }
+}
+
+#ifdef USE_FULL_ASSERT
+/* 库参数断言失败时停留，便于调试器查看现场。 */
+void assert_failed(const uint8_t* expr, const uint8_t* file, uint32_t line)
+{
+    (void)expr;
+    (void)file;
+    (void)line;
+    while (1) {}
+}
+#endif

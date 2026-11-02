@@ -1,0 +1,11 @@
+www.nsingtech.com
+ PA13: SWDIO置于输入上拉模式
+ PF0：
+ PF0默认浮空输入模式
+ PF0复用到OSC_IN
+ BOOT0：
+ BOOT0默认下拉输入模式
+34 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

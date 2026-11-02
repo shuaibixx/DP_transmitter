@@ -1,0 +1,60 @@
+www.nsingtech.com
+表 4-35 VREFP 特性
+典型 最大
+符号 参数 条件 最小值 单位
+值 值
+VDDA 模拟电源电压 正常模式 2.7 - 5.5 V
+正常模式
+VREFP 参考电压输出 2.364 2.4 2.436 V
+25℃
+Iload = 0
+IDDA (1) 来自VDDA的消耗
+μA
+- 1000 - μA
+Load cap(1) 负载电容 25 pF
+tSTART (1) 启动时间 - 5 - - μs
+1. 由设计保证，不在生产中测试。
+4.3.19 运算放大器(OPAMP)电气参数
+除非特别说明，参数是使用符合表 4-4 的条件的环境温度、f 频率和 V 供电电压测量得到。
+HCLK DDA
+表 4-36 OPAMP 特性
+符号 参数 条件 最小值 典型值 最大值 单位
+VDDA 模拟供电电压 - 2.9 - 5.5 V
+CMIR 共模电压输入范围 - 0 - VDDA V
+VIOFFSET 输入失调电压 - - 4 - mV
+ILOAD 驱动电流 - - 0.5 - mA
+No load,
+IDDA 运算放大器电流消耗 - 0.5 - mA
+quiescent mode
+CMMR 共模抑制比 - - 70 - dB
+PSRR 电源抑制比 - - 60 - dB
+GBW 增益带宽 - - 2.5 - MHz
+SR 转换速率 - 3 - V/us
+RLOAD 最小阻抗负载 - 10 - - KΩ
+CLOAD 最大容抗负载 - - - 25 pF
+CLOAD ≤ 25
+pf,
+RLOAD ≥ 10
+TSTARTUP 启动建立时间 - 3 5 μs
+kΩ,
+Follower
+configuration
+PGA Gain = 2,
+Cload = 25pF, - 1 -
+Rload = 10 KΩ
+GA Gain = 4,
+Cload = 25pF, - 0.5 -
+PGA bandwidth for Rload = 10 KΩ
+PGA BW different non MHz
+GA Gain = 16,
+inverting gain
+Cload = 25pF, - 0.125 -
+Rload = 10 KΩ
+GA Gain = 32,
+Cload = 25pF, - 0.0625 -
+Rload = 10 KΩ
+2. 由设计和综合评估保证，不在生产中测试。
+59 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

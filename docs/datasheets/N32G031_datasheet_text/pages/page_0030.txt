@@ -1,0 +1,36 @@
+www.nsingtech.com
+3.1.5 UFQFPN20
+图 3-5 N32G031 系列 UFQFPN20 引脚分布
+PC14-OSC32_IN
+PC15-OSC32_OUT
+NRST UFQFPN20
+VDDA
+PA0
+27 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057
+1AP 4AP 5AP 6AP 7AP
+PA10
+PA9
+VDD
+VSS
+PB1
+0TOOB-2FP
+7BP 6BP
+41AP 31AP
+1 15
+2 14
+3 13
+4 12
+5 11
+02
+6
+91
+7
+81
+8
+71
+9
+61
+01

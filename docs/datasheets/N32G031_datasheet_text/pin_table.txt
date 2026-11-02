@@ -1,0 +1,301 @@
+
+########## PDF page 32 ##########
+--- table 0 ---
+封装 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | Pin name (function after reset) |  |  | 1) (e p y T |  |  | e r u ct u str O I/ |  |  | Alternate functions |  |  | Additional functions | 
+8 4 P F Q L |  |  | 2 3 P F Q L |  |  | m m 5 x m m 5 ) ( 2 3 N F Q |  |  | m m 4 x m m 4 ) ( 2 3 N F Q |  |  | 0 2 N P F Q F U |  |  | 0 2 P O S S T |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | 1 |  |  | 1 |  |  | 1 |  |  | 1 |  |  | - |  |  | - |  |  | VDD |  |  | S |  |  | - |  |  | Complementary power supply |  |  | 
+2 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PC13 |  |  | I/O |  |  | TC |  |  | RTC_TAMP1, RTC_TS, RTC_OUT, |  |  | WKUP1 | 
+3 |  |  | - |  |  | - |  |  | 2 |  |  | 1 |  |  | - |  |  |  | PC14-OSC32_IN |  | I/O |  |  | TC |  |  | - |  |  | OSC32_IN | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | (PC14) |  |  |  |  |  |  |  |  |  |  |  | 
+4 |  |  | - |  |  | - |  |  | 3 |  |  | 2 |  |  | - |  |  |  | PC15- |  | I/O |  |  | TC |  |  | - |  |  | OSC32_OUT | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | OSC32_OUT |  |  |  |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | (PC15) |  |  |  |  |  |  |  |  |  |  |  | 
+5 |  |  | 2 |  |  | 2 |  |  | - |  |  | - |  |  | 2 |  |  | PF0-OSC_IN (PF0) |  |  | I/O |  |  | TC |  |  | I2C1_SDA |  |  | OSC_IN, OPAMP_VINP | 
+6 |  |  | 3 |  |  | 3 |  |  | - |  |  | - |  |  | 3 |  |  | PF1-OSC_OUT (PF1) |  |  | I/O |  |  | TC |  |  |  | I2C1_SCL, |  | OSC_OUT | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | USART1_CK, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | USART2_CK |  |  | 
+7 |  |  | 4 |  |  | 4 |  |  | 4 |  |  | 3 |  |  | 4 |  |  | NRST |  |  | I |  |  | RST |  |  | Device reset input / internal reset output (active low) |  |  |  | 
+ | 8 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | VSSA |  |  | S |  |  | - |  |  | Analog ground |  |  | 
+ | 9 |  |  | 5 |  |  | 5 |  |  | 5 |  |  | 4 |  |  | 5 |  |  | VDDA |  |  | S |  |  | - |  |  | Analog power supply |  |  | 
+10 |  |  | 6 |  |  | 6 |  |  | 6 |  |  | 5 |  |  | 6 |  |  | PA0 |  |  | I/O |  |  | TC |  |  | USART1_CTS USART2_CTS LPUART_TX, SPI1_SCK, I2S_CK, USART2_RX, LPTIM_IN1, TIM8_CH1, TIM8_ETR, LPUART_RX, |  |  | ADC_IN0, RTC_TAMP2, WKUP0, COMP_INM, COMP_OUT, OPAMP_VINP | 
+11 |  |  | 7 |  |  | 7 |  |  | 7 |  |  | 6 |  |  | 7 |  |  | PA1 |  |  | I/O |  |  | TC |  |  | USART1_RTS USART2_RTS, EVENTOUT, SPI1_NSS, I2S_WS, LPTIM_IN2, TIM8_CH2, I2C1_SMBA, TIM3_ETR, LPUART_TX |  |  | ADC_IN1, COMP_INP, OPAMP_VINP | 
+--- table 1 ---
+RTC_TAMP1,
+RTC_TS,
+RTC_OUT,
+--- table 2 ---
+PF0-OSC_IN
+(PF0)
+--- table 3 ---
+OSC_IN,
+OPAMP_VINP
+--- table 4 ---
+PF1-OSC_OUT
+(PF1)
+--- table 5 ---
+Device reset input / internal reset output
+(active low)
+--- table 6 ---
+USART1_CTS
+USART2_CTS
+LPUART_TX,
+SPI1_SCK,
+I2S_CK,
+USART2_RX,
+LPTIM_IN1,
+TIM8_CH1,
+TIM8_ETR,
+LPUART_RX,
+--- table 7 ---
+ADC_IN0,
+RTC_TAMP2,
+WKUP0,
+COMP_INM,
+COMP_OUT,
+OPAMP_VINP
+--- table 8 ---
+USART1_RTS
+USART2_RTS,
+EVENTOUT,
+SPI1_NSS,
+I2S_WS,
+LPTIM_IN2,
+TIM8_CH2,
+I2C1_SMBA,
+TIM3_ETR,
+LPUART_TX
+--- table 9 ---
+ADC_IN1,
+COMP_INP,
+OPAMP_VINP
+
+########## PDF page 33 ##########
+--- table 0 ---
+12 | 8 | 8 | 8 | - | 8 | PA2 | I/O | TC | USART1_TX, USART2_TX, TIM8_CH3, SPI1_MOSI, I2S_SD, TIM1_BKIN |  |  | ADC_IN2, WKUP2, OPAMP_VINM
+13 | 9 | 9 | 9 | - | 9 | PA3 | I/O | TC |  | USART1_RX, |  | ADC_IN3, COMP_INP
+ |  |  |  |  |  |  |  |  |  | USART2_RX, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_CH4, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_CH2, |  | 
+ |  |  |  |  |  |  |  |  |  | SPI1_MISO, |  | 
+ |  |  |  |  |  |  |  |  |  | I2S_MCK, |  | 
+ |  |  |  |  |  |  |  |  |  | LPUART_RX |  | 
+14 | 10 | 10 | 10 | 7 | 10 | PA4 | I/O | TC |  | SPI1_MISO |  | ADC_IN4, COMP_INM, OPAMP_VINP
+ |  |  |  |  |  |  |  |  |  | I2S_MCK, |  | 
+ |  |  |  |  |  |  |  |  |  | USART1_CK, |  | 
+ |  |  |  |  |  |  |  |  |  | USART2_CK, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM3_CH1, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_CH1, |  | 
+ |  |  |  |  |  |  |  |  |  | SPI1_NSS, |  | 
+ |  |  |  |  |  |  |  |  |  | I2S_WS, |  | 
+ |  |  |  |  |  |  |  |  |  | I2C1_SCL, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_ETR, |  | 
+ |  |  |  |  |  |  |  |  |  | LPUART_TX |  | 
+15 | 11 | 11 | 11 | 8 | 11 | PA5 | I/O | TC |  | SPI1_SCK, |  | ADC_IN5, COMP_INM, OPAMP_VINM
+ |  |  |  |  |  |  |  |  |  | I2S_CK, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_ETR, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_CH2N, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_CH3 |  | 
+ |  |  |  |  |  |  |  |  |  | SPI1_MOSI, |  | 
+ |  |  |  |  |  |  |  |  |  | I2C_SD, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_CH1 |  | 
+16 | 12 | 12 | 12 | 9 | 12 | PA6 | I/O | TC |  | SPI1_MISO, |  | ADC_IN6, COMP_OUT, OPAMP_VOUT
+ |  |  |  |  |  |  |  |  |  | TIM3_CH1, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_BKIN, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_CH1, |  | 
+ |  |  |  |  |  |  |  |  |  | EVENTOUT, |  | 
+ |  |  |  |  |  |  |  |  |  | LPUART_CTS, |  | 
+ |  |  |  |  |  |  |  |  |  | LPUART_TX, |  | 
+ |  |  |  |  |  |  |  |  |  | I2C2_SCL, |  | 
+ |  |  |  |  |  |  |  |  |  | LPTIM_ETR, |  | 
+ |  |  |  |  |  |  |  |  |  | BEEPER_OUT |  | 
+17 | 13 | 13 | 13 | 10 | 13 | PA7 | I/O | TC |  | SPI1_MOSI, |  | ADC_IN7, OPAMP_VINP, COMP_INP
+ |  |  |  |  |  |  |  |  |  | SPI2_NSS, |  | 
+ |  |  |  |  |  |  |  |  |  | I2S_SD, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM3_CH2, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM1_CH1N, |  | 
+ |  |  |  |  |  |  |  |  |  | TIM8_CH2, |  | 
+ |  |  |  |  |  |  |  |  |  | EVENTOUT, |  | 
+ |  |  |  |  |  |  |  |  |  | LPUART_RX, |  | 
+ |  |  |  |  |  |  |  |  |  | I2C2_SDA, |  | 
+ |  |  |  |  |  |  |  |  |  | BEEPER_N_OUT, |  | 
+ |  |  |  |  |  |  |  |  |  | USART2_CTS, |  | 
+18 | 14 | 14 | 14 | - | - | PB0 | I/O | TC | TIM3_CH3, TIM1_CH2N, EVENTOUT, SPI2_SCK, |  |  | ADC_IN8, OPAMP_VINP
+--- table 1 ---
+USART1_TX,
+USART2_TX,
+TIM8_CH3,
+SPI1_MOSI,
+I2S_SD,
+TIM1_BKIN
+--- table 2 ---
+ADC_IN2,
+WKUP2,
+OPAMP_VINM
+--- table 3 ---
+ADC_IN3,
+COMP_INP
+--- table 4 ---
+ADC_IN4,
+COMP_INM,
+OPAMP_VINP
+--- table 5 ---
+ADC_IN5,
+COMP_INM,
+OPAMP_VINM
+--- table 6 ---
+ADC_IN6,
+COMP_OUT,
+OPAMP_VOUT
+--- table 7 ---
+ADC_IN7,
+OPAMP_VINP,
+COMP_INP
+--- table 8 ---
+TIM3_CH3,
+TIM1_CH2N,
+EVENTOUT,
+SPI2_SCK,
+--- table 9 ---
+ADC_IN8,
+OPAMP_VINP
+
+########## PDF page 34 ##########
+--- table 0 ---
+19 |  |  | 15 |  |  | 15 |  |  | 15 |  |  | 11 |  |  | 14 |  |  | PB1 |  |  | I/O |  |  | TC |  |  | TIM3_CH3, TIM3_CH4, TIM1_CH3N, LPUART_RTS, I2S_SD SPI2_MOSI, USART2_CK, SPI1_MOSI, |  |  | ADC_IN9, OPAMP_VINM | 
+20 |  |  | - |  |  | 16 |  |  | 16 |  |  | - |  |  | - |  |  | PB2 |  |  | I/O |  |  | TC |  |  | I2C1_SMBA, I2C2_SMBA, TIM3_CH4, LPTIM_OUT |  |  | ADC_IN10, OPAMP_VINM | 
+21 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB10 |  |  | I/O |  |  | TC |  |  |  | SPI2_SCK, |  | ADC_IN11 | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2C1_SCL, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2C2_SCL, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPUART_TX, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM3_ETR, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | SPI1_MOSI, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2S_SD |  |  | 
+22 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB11 |  |  | I/O |  |  | TC |  |  |  | I2C1_SDA, |  | - | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2C2_SDA, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | EVENTOUT, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPUART_RX, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM8_CH3 |  |  | 
+ | 23 |  |  | 16 |  |  | - |  |  | - |  |  | 12 |  |  | - |  |  | VSS |  |  | S |  |  | - |  |  | Ground |  |  | 
+ | 24 |  |  | 17 |  |  | 17 |  |  | 17 |  |  | 13 |  |  | - |  |  | VDD |  |  | S |  |  | - |  |  | Digital power supply |  |  | 
+25 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB12 |  |  | I/O |  |  | TC |  |  | SPI1_NSS, I2S_WS, SPI2_NSS, TIM1_BKIN, EVENTOUT, TIM8_CH1 |  |  | - | 
+26 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB13 |  |  | I/O |  |  | TC |  |  |  | SPI1_SCK, |  | - | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2S_CK, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | SPI2_SCK, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | I2C2_SCL, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM1_CH1N, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPUART_CTS, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM8_CH2 |  |  | 
+27 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB14 |  |  | I/O |  |  | TC |  |  | SPI1_MISO, SPI2_MISO, I2C2_SDA, TIM1_CH2N, TIM8_CH3, LPUART_RTS |  |  | OPAMP_VINP | 
+28 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB15 |  |  | I/O |  |  | TC |  |  | SPI1_MOSI, I2S_SD, SPI2_MOSI, TIM1_CH3N, TIM8_CH3N, TIM8_CH4, |  |  | RTC_REFIN, | 
+--- table 1 ---
+TIM3_CH3,
+TIM3_CH4,
+TIM1_CH3N,
+LPUART_RTS,
+I2S_SD
+SPI2_MOSI,
+USART2_CK,
+SPI1_MOSI,
+--- table 2 ---
+I2C1_SMBA,
+I2C2_SMBA,
+TIM3_CH4,
+LPTIM_OUT
+--- table 3 ---
+ADC_IN10,
+OPAMP_VINM
+--- table 4 ---
+SPI1_MOSI,
+I2S_SD,
+SPI2_MOSI,
+TIM1_CH3N,
+TIM8_CH3N,
+TIM8_CH4,
+
+########## PDF page 35 ##########
+--- table 0 ---
+29 | 18 | 18 | 18 | - | - | PA8 | I/O | TC | USART1_CK, TIM1_CH1, EVENTOUT, MCO, SPI2_NSS, TIM8_CH2N, |  |  | -
+30 | 19 | 19 | 19 | 14 | 17 | PA9 | I/O | TC | USART1_TX, TIM1_CH2, TIM8_BKIN, I2C1_SCL, I2C2_SCL, SPI2_SCK, TIM8_CH1N, LPTIM_OUT, USART2_TX, MCO, |  |  | -
+31 | 20 | 20 | 20 | 15 | 18 | PA10 | I/O | TC | USART1_RX, TIM1_CH3, TIM8_BKIN, I2C1_SDA, I2C2_SDA, SPI2_ MISO, USART2_RX, RTC_REFIN, |  |  | -
+32 | 21 | 21 | 21 | - | - | PA11 | I/O | TC | USART1_CTS, TIM1_CH4, EVENTOUT, I2C2_SCL, SPI2_ MOSI |  |  | COMP_OUT
+33 | 22 | 22 | 22 | - | - | PA12 | I/O | TC | USART1_RTS, TIM1_ETR, EVENTOUT, I2C2_SDA, SPI2_MISO, |  |  | COMP_OUT
+34 | 23 | 23 | 23 | 16 | 19 | PA13 (SWDIO) | I/O | TC |  | USART1_TX, |  | -
+ |  |  |  |  |  |  |  |  |  | SWDIO, |  | 
+ |  |  |  |  |  |  |  |  |  | USART1_RX, |  | 
+ |  |  |  |  |  |  |  |  |  | USART2_RX, |  | 
+ |  |  |  |  |  |  |  |  |  | I2C1_SDA, |  | 
+ |  |  |  |  |  |  |  |  |  | SPI1_SCK |  | 
+ |  |  |  |  |  |  |  |  |  | I2S_CK |  | 
+35 | - | - | - | - | - | PF6 | I/O | TC | I2C1_SCL, I2C2_SCL, SPI2_SCK |  |  | -
+36 | - | - | - | - | - | PF7 | I/O | TC | I2C1_SDA , I2C2_SDA , SPI2_NSS |  |  | -
+37 | 24 | 24 | 24 | 17 | 20 | PA14 (SWCLK) | I/O | TC | USART1_TX, USART2_TX, SWCLK, I2C1_SMBA, SPI1_MISO, |  |  | -
+38 | 25 | 25 | 25 | - | - | PA15 | I/O | TC | SPI1_NSS, I2S_WS, USART1_RX, USART2_RX, LPUART_RTS, EVENTOUT |  |  | -
+--- table 1 ---
+USART1_RTS,
+TIM1_ETR,
+EVENTOUT,
+I2C2_SDA,
+SPI2_MISO,
+--- table 2 ---
+PA13
+(SWDIO)
+--- table 3 ---
+USART1_TX,
+USART2_TX,
+SWCLK,
+I2C1_SMBA,
+SPI1_MISO,
+--- table 4 ---
+PA14
+(SWCLK)
+--- table 5 ---
+SPI1_NSS,
+I2S_WS,
+USART1_RX,
+USART2_RX,
+LPUART_RTS,
+EVENTOUT
+
+########## PDF page 36 ##########
+--- table 0 ---
+39 |  |  | 26 |  |  | 26 |  |  | 26 |  |  | - |  |  | - |  |  | PB3 |  |  | I/O |  |  | TC |  |  | SPI1_SCK, I2S_CK, EVENTOUT, LPUART_TX, TIM3_ETR |  |  | - | 
+40 |  |  | 27 |  |  | 27 |  |  | 27 |  |  | - |  |  | - |  |  | PB4 |  |  | I/O |  |  | TC |  |  | SPI1_MISO, TIM3_CH1, EVENTOUT, TIM8_BKIN, LPUART_RX, LPTIM_OUT |  |  | - | 
+41 |  |  | 28 |  |  | 28 |  |  | 28 |  |  | - |  |  | - |  |  | PB5 |  |  | I/O |  |  | TC |  |  | SPI1_MOSI, I2S_SD, I2C1_SMBA, TIM8_BKIN, TIM3_CH2, LPUART_TX, LPTIM_IN1, TIM8_CH3N |  |  | - | 
+42 |  |  | 29 |  |  | 29 |  |  | 29 |  |  | 18 |  |  | - |  |  | PB6 |  |  | I/O |  |  | TC |  |  |  | I2C1_SCL, |  | - | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | USART1_TX, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM8_CH1N, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM8_CH3, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPTIM_ETR |  |  | 
+43 |  |  | 30 |  |  | 30 |  |  | 30 |  |  | 19 |  |  | - |  |  | PB7 |  |  | I/O |  |  | TC |  |  | I2C1_SDA, USART1_RX, TIM8_CH2N, LPUART_CTS, LPUART_RX, LPTIM_IN2, TIM8_CH4, | I2C1_SDA, |  | - | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | USART1_RX, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TIM8_CH2N, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPUART_CTS, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPUART_RX, |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | LPTIM_IN2, |  |  | 
+ | 44 |  |  | 31 |  |  | 31 |  |  | 31 |  |  | 20 |  |  | 1 |  |  | PF2-BOOT0 |  |  | I |  |  | B |  |  | Boot memory selection |  |  | 
+45 |  |  | - |  |  | 32 |  |  | 32 |  |  | - |  |  | - |  |  | PB8 |  |  | I/O |  |  | TC |  |  | I2C1_SCL, TIM8_CH1 |  |  | - | 
+46 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | - |  |  | PB9 |  |  | I/O |  |  | TC |  |  | I2C1_SDA, USART1_TX, SPI2_NSS, TIM8_CH2, EVENTOUT |  |  | - | 
+ | 47 |  |  | 32 |  |  | - |  |  | - |  |  | - |  |  | 15 |  |  | VSS |  |  | S |  |  | - |  |  | Ground |  |  | 
+ | 48 |  |  | - |  |  | - |  |  | - |  |  | - |  |  | 16 |  |  | VDD |  |  | S |  |  | - |  |  | Digital power supply |  |  | 
+--- table 1 ---
+SPI1_SCK,
+I2S_CK,
+EVENTOUT,
+LPUART_TX,
+TIM3_ETR
+--- table 2 ---
+SPI1_MISO,
+TIM3_CH1,
+EVENTOUT,
+TIM8_BKIN,
+LPUART_RX,
+LPTIM_OUT
+--- table 3 ---
+SPI1_MOSI,
+I2S_SD,
+I2C1_SMBA,
+TIM8_BKIN,
+TIM3_CH2,
+LPUART_TX,
+LPTIM_IN1,
+TIM8_CH3N

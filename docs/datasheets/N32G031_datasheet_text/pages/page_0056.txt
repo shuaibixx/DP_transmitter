@@ -1,0 +1,34 @@
+www.nsingtech.com
+图 4-11 I2C 总线交流波形和测量电路(1)
+1. 测量点设置于CMOS电平：0.3VDD 和0.7VDD 。
+4.3.16 SPI/I2S接口特性
+除非特别说明， SPI 参数和 I2S 参数是使用环境温度，fPCLKx 频率和 VDD 供电电压符合表 4-4 的条件测
+量得到。
+有关输入输出复用功能引脚(SPI 的 NSS、SCLK、MOSI、MISO，I2S 的 WS、CLK、SD)的特性详情，参见
+第 4.3.12 节。
+表 4-31 SPI 特性(4)
+符号 参数 条件 最小值 最大值 单位
+f 主模式 - 18
+SCLK SPI时钟频率 MHz
+1/t c(SCLK) 从模式 - 18
+t r(SCLK) t f(SCLK) SPI时钟上升和下降时间 负载电容：C = 30pF - 15 ns
+DuCy(SCK) SPI从输入时钟占空比 SPI从模式 45 55 %
+t su(NSS) (1) NSS建立时间 从模式 4t PCLK - ns
+t h(NSS) (1) NSS保持时间 从模式 2t PCLK - ns
+t
+w(SCLKH)
+(1)
+t
+w(SCLKL)
+(1) SCLK高和低的时间 主模式 tPCLK tPCLK + 2 ns
+SPI1 19.84 -
+主模式
+tsu(MI ) (1) SPI2 20.5 - ns
+数据输入建立时间
+SPI1 4.16 -
+tsu(SI) (1) 从模式
+SPI2 4.16 -
+53 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057

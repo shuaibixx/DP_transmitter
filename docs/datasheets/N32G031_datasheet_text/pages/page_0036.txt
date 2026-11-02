@@ -1,0 +1,58 @@
+www.nsingtech.com
+SPI1_SCK,
+I2S_CK,
+39 26 26 26 - - PB3 I/O TC EVENTOUT, -
+LPUART_TX,
+TIM3_ETR
+SPI1_MISO,
+TIM3_CH1,
+EVENTOUT,
+40 27 27 27 - - PB4 I/O TC -
+TIM8_BKIN,
+LPUART_RX,
+LPTIM_OUT
+SPI1_MOSI,
+I2S_SD,
+I2C1_SMBA,
+TIM8_BKIN,
+41 28 28 28 - - PB5 I/O TC -
+TIM3_CH2,
+LPUART_TX,
+LPTIM_IN1,
+TIM8_CH3N
+I2C1_SCL,
+USART1_TX,
+42 29 29 29 18 - PB6 I/O TC TIM8_CH1N, -
+TIM8_CH3,
+LPTIM_ETR
+I2C1_SDA,
+USART1_RX,
+TIM8_CH2N,
+43 30 30 30 19 - PB7 I/O TC LPUART_CTS, -
+LPUART_RX,
+LPTIM_IN2,
+TIM8_CH4,
+44 31 31 31 20 1 PF2-BOOT0 I B Boot memory selection
+I2C1_SCL,
+45 - 32 32 - - PB8 I/O TC -
+TIM8_CH1
+I2C1_SDA,
+USART1_TX,
+46 - - - - - PB9 I/O TC SPI2_NSS, -
+TIM8_CH2,
+EVENTOUT
+47 32 - - - 15 VSS S - Ground
+48 - - - - 16 VDD S - Digital power supply
+1. I = 输入，O = 输出，S = 电源， HiZ = 高阻，B =专用BOOT0引脚
+2. TC：标准5V I/O，RST: 带嵌入式弱上拉电阻的双向复位引脚
+3. 有些功能仅在部分型号芯片中支持。
+4. 复位期间和刚复位后，复用功能未开启，I/O端口被配置成模拟输入模式（PMODEx[1:0]=2’b11）。但有以下几个例外的
+信号：
+ NRST默认无GPIO功能：
+ NRST上拉输入
+ 复位后，调试系统相关的引脚默认状态时启动SWD，SWD引脚被置于输入上拉或下拉模式：
+ PA14: SWCLK置于输入下拉模式
+33 / 78 国民技术股份有限公司 NSING TECHNOLOGIES INC.
+地址：深圳市南山区高新北区宝深路109号国民技术大厦
+电话：+86-755-86309900 传真：+86-755-86169100
+网址：https://www.nsingtech.com 邮编：518057
